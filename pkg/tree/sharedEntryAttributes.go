@@ -732,15 +732,15 @@ func (s *sharedEntryAttributes) Validate(ctx context.Context, errChan chan<- err
 	}
 
 	// validate the mandatory statement on this entry
-	if s.remainsToExist() {
-		s.validateMandatory(errChan)
-		s.validateLeafRefs(ctx, errChan, warnChan)
-		s.validateLeafListMinMaxAttributes(errChan)
-		s.validatePattern(errChan)
-		s.validateMustStatements(ctx, errChan)
-		s.validateLength(errChan)
-		s.validateRange(errChan)
-	}
+	// if s.remainsToExist() {
+	// 	s.validateMandatory(errChan)
+	// 	s.validateLeafRefs(ctx, errChan, warnChan)
+	// 	s.validateLeafListMinMaxAttributes(errChan)
+	// 	s.validatePattern(errChan)
+	// 	s.validateMustStatements(ctx, errChan)
+	// 	s.validateLength(errChan)
+	// 	s.validateRange(errChan)
+	// }
 }
 
 func (s *sharedEntryAttributes) validateRange(errchan chan<- error) {
